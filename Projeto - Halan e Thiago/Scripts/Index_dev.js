@@ -1,0 +1,1 @@
+﻿function loadFrame(e, t) { $("#" + e).load(t, function (e, t, n) { if (t == "error") { var r = "Sorry but there was an error: "; $("#error").html(r + n.status + " " + n.statusText) } }) }
