@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="TemplatePage.master.cs" Inherits="Projeto___Halan_e_Thiago.TemplatePage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script src="Scripts/jquery-2.0.3.js"></script>
+    <script src="Scripts/ui/1.10.3/jquery-ui.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            <ul id="menu">
+              <li><a href="#"><span class="ui-icon ui-icon-disk"></span>Save</a></li>
+              <li><a href="#"><span class="ui-icon ui-icon-zoomin"></span>Zoom In</a></li>
+              <li><a href="#"><span class="ui-icon ui-icon-zoomout"></span>Zoom Out</a></li>
+              <li class="ui-state-disabled"><a href="#"><span class="ui-icon ui-icon-print"></span>Print...</a></li>
+              <li>
+                <a href="#">Playback</a>
+                <ul>
+                  <li><a href="#"><span class="ui-icon ui-icon-seek-start"></span>Prev</a></li>
+                  <li><a href="#"><span class="ui-icon ui-icon-stop"></span>Stop</a></li>
+                  <li><a href="#"><span class="ui-icon ui-icon-play"></span>Play</a></li>
+                  <li><a href="#"><span class="ui-icon ui-icon-seek-end"></span>Next</a></li>
+                </ul>
+              </li>
+            </ul>
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+    <script>
+        $(function () {
+            $("#menu").menu();
+        });
+  </script>
+</body>
+</html>
