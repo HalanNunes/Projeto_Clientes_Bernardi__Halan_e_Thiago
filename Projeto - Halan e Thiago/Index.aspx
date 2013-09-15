@@ -36,12 +36,8 @@
         }
     </style>
     <script type="text/javascript">
-        function opa() {
-
-            $("#content").load('Formulario.aspx', function (response, status, xhr) {
-                alert(response);
-                alert(status);
-                alert(xhr);
+        function loadFrame(idElm, url) {
+            $("#"+idElm).load(url, function (response, status, xhr) {
                 if (status == "error") {
                     var msg = "Sorry but there was an error: ";
                     $("#error").html(msg + xhr.status + " " + xhr.statusText);
@@ -55,12 +51,12 @@
     <header style="height: 200px;"></header>
     <nav id="menu">
         <ul>
-            <li><a href="#" onclick="opa()">Cadastro</a></li>
-            <li><a href="#">Consulta</a></li>
+            <li><a href="#" onclick="loadFrame('content', 'Formulario.aspx')">Cadastro</a></li>
+            <li><a href="#" onclick="loadFrame('content', '')">Consulta</a></li>
         </ul>
     </nav>
     <aside id="content"></aside>
-    <footer style="/*background:url(Images/bg.png) repeat-X;*/ height:200px;"></footer>
+    <footer style="height:200px;"></footer>
     </form>
 </body>
 </html>
